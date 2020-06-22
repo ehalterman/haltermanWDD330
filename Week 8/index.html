@@ -25,6 +25,7 @@
     <canvas id="test1" class="test1" width="200" height="200">
         Sorry, but your browser doesn't support canvas.
     </canvas>
+    <p>Photo one may throw error because I attempted to change it to black and white which throws security error in Chrome</p>
     <canvas id="test2" class="test2" width="200" height="200">
         Sorry, but your browser doesn't support canvas. 
     </canvas>
@@ -57,10 +58,21 @@
             var context2 = canvas2.getContext("2d");
             var image = document.getElementById("myImageElem");
             context2.drawImage(image, 25, 25);
-            var imageData = context2.getImageData(0, 0, 1, 1);
-            var pixelData = imageData.data;
-            console.log(pixelData.length)
-;        }
+            var imageData = context2.getImageData(0, 0, 200, 200);
+            var red, green, blue, grayscale;
+            for (var i = 0; i < imageData.data.length; i += 4){
+                red = imageData.data[i];
+                green = imageData.data[i+1];
+                blue = imageData.data[i+2];
+
+                grayscale = red * .03 + green * 0.59 + blue * 0.11;
+
+                imageData.data[i] = grayscale;
+                imageData.data[i+1] = grayscale;
+                imageData.data[i+2] = grayscale;
+            }
+            context2.putImageData(imageData, 0, 0);
+       }
     </script>
 </body>
 </html>
