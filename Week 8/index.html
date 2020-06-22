@@ -22,6 +22,7 @@
         <li id="transitions"><a href="chapter8notes.pdf" target="_blank">Chapter 8 Notes</a></li>
         <li><a href="chapter12notes.pdf" target="_blank">Chapter 12 Notes</a></li>
     </ul>
+    <h2>Canvas</h2>
     <canvas id="myCanvas" class="myCanvas" width="200" height="200">
         Sorry, but your browser doesn't support canvas.
     </canvas>
@@ -36,6 +37,14 @@
         Sorry, but your browser doesn't support canvas. 
     </canvas>
     <img src="kiss.jpg" alt="family pic" id="myImageElem">
+
+
+    <h2>SVG</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+        <circle cx="50" cy="50" r="25" fill="purple"/>
+        <rect x="10" y="10" width="20" height="20"  
+        fill="gray" stroke="purple" stroke-width="3"  />  
+    </svg>
     <script>
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
