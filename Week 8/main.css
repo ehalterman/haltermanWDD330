@@ -1,0 +1,8 @@
+#transitions {
+font-size: 18px;
+transition:all .5s .2s;
+}
+#transitions:hover {
+    font-size: 24px;;
+    transform: rotate(360deg);
+}

@@ -15,6 +15,7 @@ h1, h2, label, input {
 }
 li {
     font-family: 'Homemade Apple', cursive;
+    text-align: left;
 }
 
 #item {

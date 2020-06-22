@@ -1,4 +1,4 @@
-const url = '#';
+const url = 'https://pokeapi.co/api/v2/pokemon-species/132/';
 
 fetch(url)
 .then((response) => {
