@@ -32,6 +32,9 @@
     <canvas id="test2" class="test2" width="200" height="200">
         Sorry, but your browser doesn't support canvas. 
     </canvas>
+    <canvas id="test3" class="myCanvas" width="200" height="200">
+        Sorry, but your browser doesn't support canvas. 
+    </canvas>
     <img src="kiss.jpg" alt="family pic" id="myImageElem">
     <script>
         var canvas = document.getElementById("myCanvas");
@@ -76,6 +79,13 @@
             }
             context2.putImageData(imageData, 0, 0);
        }
+
+       var canvas3 = document.getElementById('test3');
+       var context3 = canvas3.getContext("2d");
+       canvas3.style.backgroundColor = "purple";
+       context3.textAlign = "left";
+       context3.font = "18px sans-serif";
+       context3.fillText("Test Fill Text In Canvas", 10, 50);
     </script>
 </body>
 </html>
