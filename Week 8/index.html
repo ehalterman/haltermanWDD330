@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 300 Week 8</title>
-    <script>
-        var canvas = document.getElementById("myCanvas");
-        var context = canvas.getContext("2d");
-        context.strokeStyle = "purple";
-        context.fillStyle = "gray";
-        
-    </script>
+    
     <style>
-        .myCanvas {
+        .myCanvas, .test1, .test2 {
             border: solid 1px black;
         }
     </style>
@@ -28,5 +22,45 @@
     <canvas id="myCanvas" class="myCanvas" width="200" height="200">
         Sorry, but your browser doesn't support canvas.
     </canvas>
+    <canvas id="test1" class="test1" width="200" height="200">
+        Sorry, but your browser doesn't support canvas.
+    </canvas>
+    <canvas id="test2" class="test2" width="200" height="200">
+        Sorry, but your browser doesn't support canvas. 
+    </canvas>
+    <img src="kiss.jpg" alt="family pic" id="myImageElem">
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.strokeStyle = "purple";
+        context.fillStyle = "gray";
+        context.fillRect(10, 10, 100, 100);
+        context.strokeRect(10, 10, 100, 100);
+
+        var canvas1 = document.getElementById("test1");
+        var context1 = canvas1.getContext("2d");
+        context1.beginPath();
+        context1.arc(100, 100, 50, 0, Math.PI*2, true);
+        context1.closePath();
+        context1.strokeStyle = "black";
+        var gradient = context1.createLinearGradient(0, 0, 0, 200);
+        gradient.addColorStop(0, "gray");
+        gradient.addColorStop(1, "purple");
+        context1.fillStyle = gradient;  
+        context1.lineWidth = 3;
+        context1.fill();
+        context1.stroke();  
+
+        window.addEventListener("load", drawImageToCanvas, false);
+        function drawImageToCanvas() {
+            var canvas2 = document.getElementById("test2");
+            var context2 = canvas2.getContext("2d");
+            var image = document.getElementById("myImageElem");
+            context2.drawImage(image, 25, 25);
+            var imageData = context2.getImageData(0, 0, 1, 1);
+            var pixelData = imageData.data;
+            console.log(pixelData.length)
+;        }
+    </script>
 </body>
 </html>
