@@ -30,6 +30,9 @@ textarea {
     background-size: cover;
     color: white;
 }
+#quote {
+    padding:10px;
+}
 
 h1, h2 {
     font-family: 'Fredoka One', cursive;
@@ -44,7 +47,7 @@ h1, h2 {
     #contents {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 5px;
+        gap: 10px;
     }
 
 }
