@@ -1,0 +1,50 @@
+body {
+    max-width: 760px;
+    text-align: center;
+    margin: auto;
+    background-image: url("sparkle.jpg");
+    font-family: 'Patrick Hand', cursive;
+}
+fieldset{
+    margin: 10px;
+    border-radius: 25px;
+    border-color: darkmagenta;
+}
+input {
+    margin: 10px;
+    text-align: right;
+    border-color: darkmagenta;
+    border-radius: 7px;
+    padding: 5px;
+}
+textarea {
+    text-align: right;
+    border-color: darkmagenta;
+    border-radius: 7px;
+    padding: 5px;
+}
+.goal {
+    border: 3px dotted darkmagenta;
+    border-radius: 25px;
+    background-image: url("rainbow.jpg");
+    background-size: cover;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Fredoka One', cursive;
+}
+.button {
+    border-radius: 7px;
+    padding: 5px;
+    border-color: darkmagenta;
+    background-color: rgb(247, 247, 237);
+}
+@media screen and (min-width: 600px) {
+    #contents {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+    }
+
+}

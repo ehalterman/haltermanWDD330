@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project - Vision Board</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&display=swap" rel="stylesheet">    <script src="main.js"></script>
+</head>
+<body>
+    <div id="visionBoard">
+        <h1 id="boardTitle"></h1>
+        <div id="quote"></div>
+        <div id="contents"></div>
+    </div>
+    <div id="input form" >
+       <!-- <input type="button" id="hideButton" onclick="hide()" value="-">-->
+        <form>
+            <fieldset>
+                <label for="title">Enter a Title:</label>
+                <input type="text" name="title" id="title" placeholder="My Vision Board"><br>
+                <input type="button" class="button" id="titleButton" value="Add Title" onclick="createTitle()">
+            </fieldset>
+            <fieldset>
+                <label for="goalTitle">Enter a Goal Title:</label>
+                <input type="text" name="goalTitle" id="goalTitle" placeholder="Drink More Water"><br>
+                <label for="stepStones">Enter your Stepping Stones:</label>
+                <textarea type="text" name="stepStones" id="stepStones" placeholder="buy nice water bottle, drink 4 full bottles a day a day"></textarea><br>
+                <label for="date">Enter Completion Date:</label>
+                <input type="text" name="date" id="date" placeholder="Christmas"><br>
+                <label for="notes">Enter Any Notes:</label>
+                <textarea type="text" name="notes" id="notes" placeholder="Maybe try flavored water at first"></textarea><br>
+
+                <input type="button" class="button" id="goalButton" value="Add Goal" onclick="createGoal()">
+                <input type="reset" id="resetButton" class="button" value="Reset">
+            </fieldset>
+        </form>
+    </div>
+    
+
+    
+</body>
+</html>
